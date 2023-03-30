@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>EVALUACIÓN</title>
+        <meta name="description" content="Evaluación de cierre de la Unidad I: Bocetos de introducción a la programación" />
+    </head>
+    <body>
+        <nav>
+            <a href="index.html"><a href="index.html"><span class="miNombre">NAF</span></a>
+            <a href="page-1.html">Primero</a>
+            <a href="page-2.html">Segundo</a>
+            <a href="page-3.html">Tercero</a>
+            <a href="page-4.html">Cuarto</a>
+        </nav>
+        <main></main>
+        <aside>
+            <p>¡Hola! Mi nombre es <b>Natalie Astudillo</b><span class="(NAF)"></span> y lo que encuentras en este sitio web son algunos bocetos de introducción a la programación. En cada uno usé <strong>p5.js</strong>, que es <span id="miTexto"></span></p>
+        </aside>
+        <script>
+            function setup() {
+                createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
+                selectAll("a")[0].addClass("aqui");
+                selectAll(".NAF").forEach((n) => {
+                    n.html("NAF");
+                });
+                select("#miTexto").html("es una biblioteca de JavaScript para la programación creativa, que busca hacer que programar sea accesible e inclusivo para artistas, diseñadores, educadores, principiantes y cualquier otra persona!. Por otro lado, empleé la utilización de HTML y CSS para ver aspectos visuales de la página. ");
+            }
+
+            function draw() {
+                background(85, 128, 187);
+                textSize(50);
+                textAlign(CENTER, CENTER);
+                 if (mouseIsPressed === true) {
+   text("🌌", mouseX, mouseY);
+  } else {
+    text("🌠", mouseX, mouseY);
+  }
+            }
+            function windowResized() {
+                resizeCanvas(windowWidth, windowHeight);
+            }
+        </script>
+    </body>
+</html>

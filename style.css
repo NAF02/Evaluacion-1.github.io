@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: (255, 209, 220);
+    color:rgba(0, 0, 0,0.8);
+    font-family: 'Montserrat', sans-serif;
+}
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 8px 5px rgba (0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+}
+nav a{
+    color:rgba(255,255,255,0.8);
+     padding: 1rem;
+}
+
+nav a:hover{
+    color:rgba(24, 67, 135);    
+}
+
+}
+canvas {
+    display: block;
+}
+
+aside {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 38vw;
+}
+ @media (orientation: portrait) {
+    aside {
+        width: 62vw;
+    }
+}
+
+div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:80vw;
+}
+
+@media (orientation: landscape) {
+    div {
+        width: 40vw;
+    }
+}
+
+aside p, div p {
+    font-size: 1.38rem;
+    line-height: 1.38;
+    margin-bottom:1rem;
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+div p input{
+    float:right;
+    margin-top:.5rem;
+}
+
+aside span, div span{
+    font-weight: bold;
+}
+
+}
+canvas {
+  display: block;
+}
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255,255,255, .2);
+    box-shadow: 0 2px 5px rgba(0,0,0, .25);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    padding: 1rem;
+    color:rgba(0,0,0, .75);
+}
+nav a:hover{
+    color:rgba(0,0,0,1);
+ }
+
+nav a.aqui{
+    text-decoration: none;
+    color:rgba(0,0,0, .5);
+}
+aside {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -%50);
+    width: 38vw;
+}
+@media (orientation: portrait){
+    aside {
+        width:62vw;
+    }
+}
+aside p {
+    font-size: 1.38rem;
+    line-height:1.38;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+@media (orientation: portrait) {
+    aside {
+        width: 62vw;
+    }
+}
+
+aside p {
+    font-size: 1.38rem;
+    line-height: 1.38;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+footer {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    opacity: 20;
+    
+}
+
+footer img {
+    width: 50%;
+    height: auto;       
+}
+
+a{
+  text-decoration:none;
+  color:#333;
+}
+
+h3{
+  font-size:18px;
+}
+
+div p input{
+    float:right;
+    margin-top:.5rem;
+}
+
+aside span, div span{
+    font-weight: bold;
+}
+div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:80vw;
+}
+fieldset{
+  border: none;
+}
+output{
+  display: inline-block;
+  min-width: 2.5em;
+     top: 50%;
+        left: 50%;
+}
+label, output{
+  padding: 2px 9px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 1.1em;
+     top: 50%;
+        left: 50%;
+}
+label[for=r], output[for=r]{
+  background-color: #f00;
+}
+label[for=g], output[for=g]{
+  background-color: #0f0;
+}
+label[for=b], output[for=b]{
+  background-color: #00f;
+}
+#hex{
+  min-width: 4.5em;
+  font-size: 3em;
+  background: rgba(255,255,255,.3);
+    top: 50%;
+        left: 50%;
+}
+@media (orientation: portrait) {
+    aside {
+        width: 62vw;
+    }
+@media (orientation: landscape) {
+    div {
+        width: 40vw;
+    }
+canvas {
+  display: block;
+}

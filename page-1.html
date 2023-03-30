@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>PRIMERO</title>
+  <meta name="description" content="Evaluación de cierre de la Unidad I: Bocetos de introducción a la programación">
+</head>
+<body>
+  <nav>
+    <a href="index.html"></a><a href="index.html"><span class="miNombre">NAF</span></a> <a href="page-1.html">Primero</a> <a href="page-2.html">Segundo</a> <a href="page-3.html">Tercero</a> <a href="page-4.html">Cuarto</a>
+  </nav>
+  <div>
+    <p id="primerP">Ajuste de <em>Hue</em></p>
+    <p id="segundoP">Ajuste de <em>Saturation</em></p>
+    <p id="tercerP">Ajuste de <em>Brightness</em></p>
+  </div>
+  <script>
+                        
+            var sliderH; 
+            var sliderS; 
+            var sliderB;
+            
+
+  function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  sliderH = createSlider(0, 360, 100);
+  sliderH.position(940,390)
+  sliderS = createSlider(0, 100, 100);
+  sliderS.position(940,440)
+  sliderB = createSlider(0, 100, 100);
+  sliderB.position(940,490)
+  }
+
+  function draw() {
+  colorMode(HSB, 360, 100, 100);
+
+
+  const h = sliderH.value();
+  const s = sliderS.value();
+  const b = sliderB.value();
+  fill(h, s, b)
+  rect(0, 0, windowWidth, windowHeight);
+
+  if (b < 30) {
+    fill(255);
+  } else {
+    fill(0);
+  }
+   let valores = [sliderH.value(), sliderS.value(), sliderB.value()];
+  let valorH = sliderH.value()
+  let valorS = sliderS.value()
+  let valorB = sliderB.value()
+  let separator = ', ';
+  let textovalores = join(valores, separator);
+    textSize(20);
+    text("H " + valorH + " °S " + valorS + " % °B " + valorB + "%", windowWidth / 2, windowHeight - 40);
+    
+  }
+        
+  function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  }
+            
+            
+         
+  </script>
+</body>
+</html>

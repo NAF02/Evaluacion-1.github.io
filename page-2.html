@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>PRIMERO</title>
+  <meta name="description" content="Evaluación de cierre de la Unidad I: Bocetos de introducción a la programación">
+</head>
+<body>
+  <nav>
+    <a href="index.html"></a><a href="index.html"><span class="miNombre">NAF</span></a> <a href="page-1.html">Primero</a> <a href="page-2.html">Segundo</a> <a href="page-3.html">Tercero</a> <a href="page-4.html">Cuarto</a>
+  </nav>
+  <div>
+    <p id="primerP">Ajuste de <em>Red</em></p>
+    <p id="segundoP">Ajuste de <em>Green</em></p>
+    <p id="tercerP">Ajuste de <em>Blue</em></p>
+  </div>
+  <script>
+                        
+            var sliderR; 
+            var sliderG; 
+            var sliderB;
+            
+
+  function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  sliderR = createSlider(0, 255, 100);
+  sliderR.position(940,390)
+  sliderG = createSlider(0, 255, 100);
+  sliderG.position(940,440)
+  sliderB = createSlider(0, 255, 100);
+  sliderB.position(940,490)
+  }
+
+  function draw() {
+  colorMode(RGB, 255,255,255);
+
+
+  const r = sliderR.value();
+  const g = sliderG.value();
+  const b = sliderB.value();
+  fill(r, g, b)
+  rect(0, 0, windowWidth, windowHeight);
+
+  if (b < 30) {
+    fill(255);
+  } else {
+    fill(0);
+  }
+   let valores = [sliderR.value(), sliderG.value(), sliderB.value()];
+  let valorR = sliderR.value()
+  let valorG = sliderG.value()
+  let valorB = sliderB.value()
+  let separator = ', ';
+  let textovalores = join(valores, separator);
+    textSize(20);
+    text("R " + valorR + " °G " + valorG + " % °B " + valorB + "%", windowWidth / 2, windowHeight - 40);
+    
+  }
+      text('Ajustes de R: '+r,150,295);
+      text('Ajustes de G: '+g,150,315);
+      text('Ajustes de B: '+b,150,335);
+        
+  function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  }
+            
+            
+         
+  </script>
+</body>
+</html>
